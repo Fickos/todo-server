@@ -38,7 +38,6 @@ module.exports.getTasks = async (req, res, next) => { // possibly redundant
 
 module.exports.saveTask = async (req, res, next) => {
     try {
-        // TO DO: Extract Location string properly -> NOMINATIM ETC.
         let createdTask = await service.create({
             ...req?.body,
             ListID: req?.params?.listId

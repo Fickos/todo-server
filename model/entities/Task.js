@@ -20,6 +20,11 @@ class Task extends Sequelize.Model {
           field: "Location",
           allowNull: false,
         },
+        State: {
+          type: DataTypes.ENUM("TO_DO", "COMPLETED"),
+          allowNull: false,
+          defaultValue: "TO_DO",
+        },
         CreatedAt: {
           type: DataTypes.DATE,
           field: "CreatedAt",
